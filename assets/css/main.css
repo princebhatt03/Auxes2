@@ -59,6 +59,7 @@ h6 {
   font-family: var(--heading-font);
 }
 .header {
+  top: 12%;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 10px;
@@ -106,10 +107,15 @@ h6 {
 }
 
 @media (max-width: 1200px) {
+  .header {
+    top: 0;
+  }
   .header .logo {
     order: 1;
   }
-
+  #top {
+    display: none;
+  }
   .header .btn-getstarted {
     order: 2;
     margin: 0 15px 0 0;
@@ -122,6 +128,7 @@ h6 {
 }
 
 .scrolled .header {
+  top: 0;
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
 }
 

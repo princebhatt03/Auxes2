@@ -1,10 +1,17 @@
-(function() {
-  "use strict";
+(function () {
+  'use strict';
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    if (
+      !selectHeader.classList.contains('scroll-up-sticky') &&
+      !selectHeader.classList.contains('sticky-top') &&
+      !selectHeader.classList.contains('fixed-top')
+    )
+      return;
+    window.scrollY > 50
+      ? selectBody.classList.add('scrolled')
+      : selectBody.classList.remove('scrolled');
   }
 
   document.addEventListener('scroll', toggleScrolled);
@@ -31,14 +38,13 @@
         mobileNavToogle();
       }
     });
-
   });
 
   /**
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       if (document.querySelector('.mobile-nav-active')) {
         e.preventDefault();
         this.parentNode.classList.toggle('active');
@@ -65,14 +71,16 @@
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      window.scrollY > 100
+        ? scrollTop.classList.add('active')
+        : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
+  scrollTop.addEventListener('click', e => {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   });
 
@@ -87,7 +95,7 @@
       duration: 600,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: false,
     });
   }
   window.addEventListener('load', aosInit);
@@ -96,7 +104,7 @@
    * Initiate glightbox
    */
   const glightbox = GLightbox({
-    selector: '.glightbox'
+    selector: '.glightbox',
   });
 
   /**
@@ -107,51 +115,65 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-    });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
+      initIsotope = new Isotope(
+        isotopeItem.querySelector('.isotope-container'),
+        {
+          itemSelector: '.isotope-item',
+          layoutMode: layout,
+          filter: filter,
+          sortBy: sort,
         }
-      }, false);
+      );
     });
 
+    isotopeItem
+      .querySelectorAll('.isotope-filters li')
+      .forEach(function (filters) {
+        filters.addEventListener(
+          'click',
+          function () {
+            isotopeItem
+              .querySelector('.isotope-filters .filter-active')
+              .classList.remove('filter-active');
+            this.classList.add('filter-active');
+            initIsotope.arrange({
+              filter: this.getAttribute('data-filter'),
+            });
+            if (typeof aosInit === 'function') {
+              aosInit();
+            }
+          },
+          false
+        );
+      });
   });
 
   /**
    * Frequently Asked Questions Toggle
    */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
+  document
+    .querySelectorAll('.faq-item h3, .faq-item .faq-toggle')
+    .forEach(faqItem => {
+      faqItem.addEventListener('click', () => {
+        faqItem.parentNode.classList.toggle('faq-active');
+      });
     });
-  });
 
   /**
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll('.swiper').forEach(function(swiper) {
-      let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
+    document.querySelectorAll('.swiper').forEach(function (swiper) {
+      let config = JSON.parse(
+        swiper.querySelector('.swiper-config').innerHTML.trim()
+      );
       new Swiper(swiper, config);
     });
   }
@@ -160,7 +182,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -168,7 +190,7 @@
           let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
           window.scrollTo({
             top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }, 100);
       }
@@ -186,15 +208,19 @@
       let section = document.querySelector(navmenulink.hash);
       if (!section) return;
       let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+      if (
+        position >= section.offsetTop &&
+        position <= section.offsetTop + section.offsetHeight
+      ) {
+        document
+          .querySelectorAll('.navmenu a.active')
+          .forEach(link => link.classList.remove('active'));
         navmenulink.classList.add('active');
       } else {
         navmenulink.classList.remove('active');
       }
-    })
+    });
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
-
 })();
