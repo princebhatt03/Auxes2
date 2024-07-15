@@ -2998,11 +2998,15 @@ button:focus {
   border-color: #e84545;
   color: #e9e3d5;
 }
+#pll {
+  padding-left: 10px;
+}
 .new_footer_top .f_social_icon a + a {
   margin-left: 4px;
 }
 .new_footer_top .f-title {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  margin-top: 15px;
   color: #e84545;
 }
 .f_600 {
