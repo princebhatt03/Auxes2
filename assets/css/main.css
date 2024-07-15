@@ -110,6 +110,9 @@ h6 {
   .header {
     top: 0;
   }
+  .about-logo {
+    display: none;
+  }
   .header .logo {
     order: 1;
   }
