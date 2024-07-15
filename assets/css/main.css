@@ -107,7 +107,7 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 20px 10px;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -370,6 +370,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
+    text-decoration: underline;
     color: var(--nav-dropdown-hover-color);
   }
 
@@ -613,6 +614,14 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+}
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  transition: all ease-in-out 0.3;
+  /* font-weight: bold; */
+  text-decoration: underline;
+  /* color: var(--nav-dropdown-hover-color); */
 }
 
 /*--------------------------------------------------------------
@@ -2077,6 +2086,7 @@ section,
 
 .pagination li.active a,
 .pagination li:hover a {
+  text-decoration: underline;
   color: var(--contrast-color);
 }
 
