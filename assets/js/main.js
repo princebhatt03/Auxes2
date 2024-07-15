@@ -1,17 +1,5 @@
-/**
-* Template Name: Append
-* Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-* Updated: May 18 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
-
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
