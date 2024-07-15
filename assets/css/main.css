@@ -59,7 +59,7 @@ h6 {
   font-family: var(--heading-font);
 }
 .header {
-  top: 12%;
+  top: 10%;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 10px;
@@ -71,7 +71,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 33px;
+  max-height: 45px;
   margin-right: 8px;
 }
 
@@ -102,7 +102,10 @@ h6 {
 #deskHide {
   display: none;
 }
-
+/* #page-title {
+  position: relative;
+  top: 4rem;
+} */
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
@@ -110,6 +113,12 @@ h6 {
 }
 #mobHide {
   display: none;
+}
+#top {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 990;
 }
 
 @media (max-width: 1200px) {
@@ -147,7 +156,6 @@ h6 {
 }
 
 .scrolled .header {
-  top: 0;
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
 }
 
