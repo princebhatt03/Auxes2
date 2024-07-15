@@ -47,14 +47,12 @@
   <body class="services-details-page">
     <section
       id="top"
-      class="bg-dark pt-4 pb-4">
+      class="bg-dark pt-2 pb-2">
       <div class="container-xl">
-        <div class="row top_1">
-          <div class="col-md-6">
-            <div class="top_1l">
-              <ul
-                style="position: relative; left: 50%"
-                class="mb-0 font_14">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-8">
+            <div class="">
+              <ul class="mb-0 font_14">
                 <li class="d-inline-block">
                   <a
                     class="text-white"
@@ -66,7 +64,11 @@
                   style="cursor: pointer"
                   class="d-inline-block ms-4 text-white">
                   <i class="bi bi-telephone-fill"></i>
-                  (+91) 741 581 5467
+                  <a
+                    class="text-white"
+                    href="tel:+917415815467"
+                    >+91 7415815467</a
+                  >
                 </li>
                 <li
                   style="cursor: pointer"
@@ -77,6 +79,22 @@
                     href="mailto:admin@auxes.in"
                     >admin@auxes.in</a
                   >
+                </li>
+                <li
+                  style="cursor: pointer"
+                  class="d-inline-block ms-4 text-white">
+                  <button
+                    style="
+                      border: none;
+                      background-color: #e84545;
+                      padding: 5px 20px;
+                      border-radius: 4px;
+                      color: white;
+                    "
+                    class="btn-getstarted"
+                    href="https://app.auxes.in/login">
+                    Login
+                  </button>
                 </li>
               </ul>
             </div>
@@ -133,6 +151,7 @@
         </nav>
 
         <a
+          id="deskHide"
           class="btn-getstarted"
           href="https://app.auxes.in/login"
           >Login</a
@@ -622,18 +641,30 @@
                 ">
                 <h3 class="f-title f_600 t_color f_size_18">Contact</h3>
                 <ul class="list-unstyled f_list">
-                  <li><a href="services-details.html">Documentation</a></li>
-                  <li><a href="portfolio-details.html">Support Policy</a></li>
-                  <li><a href="7554055733">+91 7554055733</a></li>
                   <li>
-                    <a
-                      href="#"
-                      onclick="location.href='mailto:admin@auxes.in'"
-                      >admin@auxes.in</a
+                    <a href="services-details.html">
+                      <i class="bi bi-geo-alt-fill"></i> &nbsp; Second Floor,
+                      Plot# 42, Zone-1, M P Nagar, Bhopal (M.P.)-462011</a
                     >
                   </li>
                   <li>
-                    <a href="https://wa.me/7415815467">+91 7415815467</a>
+                    <a href="7554055733">
+                      <i class="bi bi-telephone-fill"></i>&nbsp; +91
+                      7554055733</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      onclick="location.href='mailto:admin@auxes.in'">
+                      <i class="bi bi-envelope-fill"></i>
+                      &nbsp;admin@auxes.in</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://wa.me/7415815467"
+                      ><i class="bi bi-whatsapp"></i> &nbsp;+91 7415815467</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -647,7 +678,7 @@
                   animation-delay: 0.8s;
                   animation-name: fadeInLeft;
                 ">
-                <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
                 <div class="f_social_icon">
                   <a href="#"><i class="bi bi-facebook"></i></a>
                   <a href="#"><i class="bi bi-twitter"></i></a>

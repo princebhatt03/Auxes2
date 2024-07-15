@@ -6,6 +6,65 @@
       content="width=device-width, initial-scale=1.0"
       name="viewport" />
     <title>Auxes - Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <style>
+      .sidebar-box {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .block-21 {
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+      }
+
+      .block-21:last-child {
+        border-bottom: none;
+      }
+
+      .blog-img {
+        width: 80px;
+        height: 80px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        display: block;
+      }
+
+      .text {
+        flex: 1;
+      }
+
+      .heading {
+        font-size: 1.1em;
+        margin: 0;
+      }
+
+      .meta {
+        margin-top: 5px;
+      }
+
+      .meta a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .meta a:hover {
+        text-decoration: underline;
+      }
+
+      .fa-download {
+        margin-right: 5px;
+      }
+    </style>
     <meta
       content=""
       name="description" />
@@ -47,14 +106,12 @@
   <body class="blog-page">
     <section
       id="top"
-      class="bg-dark pt-4 pb-4">
+      class="bg-dark pt-2 pb-2">
       <div class="container-xl">
-        <div class="row top_1">
-          <div class="col-md-6">
-            <div class="top_1l">
-              <ul
-                style="position: relative; left: 50%"
-                class="mb-0 font_14">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-8">
+            <div class="">
+              <ul class="mb-0 font_14">
                 <li class="d-inline-block">
                   <a
                     class="text-white"
@@ -66,7 +123,11 @@
                   style="cursor: pointer"
                   class="d-inline-block ms-4 text-white">
                   <i class="bi bi-telephone-fill"></i>
-                  (+91) 741 581 5467
+                  <a
+                    class="text-white"
+                    href="tel:+917415815467"
+                    >+91 7415815467</a
+                  >
                 </li>
                 <li
                   style="cursor: pointer"
@@ -77,6 +138,22 @@
                     href="mailto:admin@auxes.in"
                     >admin@auxes.in</a
                   >
+                </li>
+                <li
+                  style="cursor: pointer"
+                  class="d-inline-block ms-4 text-white">
+                  <button
+                    style="
+                      border: none;
+                      background-color: #e84545;
+                      padding: 5px 20px;
+                      border-radius: 4px;
+                      color: white;
+                    "
+                    class="btn-getstarted"
+                    href="https://app.auxes.in/login">
+                    Login
+                  </button>
                 </li>
               </ul>
             </div>
@@ -135,6 +212,7 @@
         </nav>
 
         <a
+          id="deskHide"
           class="btn-getstarted"
           href="https://app.auxes.in/login"
           >Login</a
@@ -413,19 +491,95 @@
         <!-- Section Title -->
 
         <!-- End Section Title -->
-        <h3>Pricing Details</h3>
+        <h1 style="text-align: center">Features</h1>
 
         <div
           class="container"
           data-aos="zoom-in"
           data-aos-delay="100">
-          <div class="row g-4">
+          <div class="row">
             <div
-              class="col-lg-12 d-flex justify-content-center align-items-center">
+              id="resp"
+              class="col-lg-12 d-flex justify-content-between align-items-center">
               <div class="pricing-item">
                 <img
+                  class="fetimg"
                   src="assets/img/portfolio/1.png"
                   alt="" />
+              </div>
+              <div>
+                <div class="sidebar-box ftco-animate fadeInUp ftco-animated">
+                  <h3>Products Details</h3>
+                  <div class="block-21 mb-4 d-flex">
+                    <a
+                      class="blog-img mr-4"
+                      style="background-image: url(assets/img/aicon.png)"></a>
+                    <div class="text">
+                      <h3 class="heading"><a href="#">Brochure</a></h3>
+                      <div class="meta">
+                        <a
+                          download
+                          href="https://auxes.in/repositary/Templates/AuxSigner_v1.pdf"
+                          target="_blank">
+                          <span
+                            class="fa fa-download"
+                            aria-hidden="true"></span>
+                          Download Brochure
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-21 mb-4 d-flex">
+                    <a
+                      class="blog-img mr-4"
+                      style="background-image: url(assets/img/aicon.png)"></a>
+                    <div class="text">
+                      <h3 class="heading"><a href="#">Video</a></h3>
+                      <div class="meta">
+                        <a href="#">
+                          <span
+                            class="fa fa-download"
+                            aria-hidden="true"></span>
+                          Download Video
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-21 mb-4 d-flex">
+                    <a
+                      class="blog-img mr-4"
+                      style="background-image: url(assets/img/aicon.png)"></a>
+                    <div class="text">
+                      <h3 class="heading"><a href="#">Trail Version</a></h3>
+                      <div class="meta">
+                        <a
+                          download
+                          href="assets/repo/AuxSigner-Trial Setup.msi">
+                          <span
+                            class="fa fa-download"
+                            aria-hidden="true"></span>
+                          Download Trial Version
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-21 mb-4 d-flex">
+                    <a
+                      class="blog-img mr-4"
+                      style="background-image: url(assets/img/aicon.png)"></a>
+                    <div class="text">
+                      <h3 class="heading"><a href="#">Complete Solution</a></h3>
+                      <div class="meta">
+                        <a href="repositary\Other Tools\AuxSigner_v1.zip">
+                          <span
+                            class="fa fa-download"
+                            aria-hidden="true"></span>
+                          Download Complete Solution
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- End Pricing Item -->
@@ -617,18 +771,30 @@
                 ">
                 <h3 class="f-title f_600 t_color f_size_18">Contact</h3>
                 <ul class="list-unstyled f_list">
-                  <li><a href="services-details.html">Documentation</a></li>
-                  <li><a href="portfolio-details.html">Support Policy</a></li>
-                  <li><a href="7554055733">+91 7554055733</a></li>
                   <li>
-                    <a
-                      href="#"
-                      onclick="location.href='mailto:admin@auxes.in'"
-                      >admin@auxes.in</a
+                    <a href="services-details.html">
+                      <i class="bi bi-geo-alt-fill"></i> &nbsp; Second Floor,
+                      Plot# 42, Zone-1, M P Nagar, Bhopal (M.P.)-462011</a
                     >
                   </li>
                   <li>
-                    <a href="https://wa.me/7415815467">+91 7415815467</a>
+                    <a href="7554055733">
+                      <i class="bi bi-telephone-fill"></i>&nbsp; +91
+                      7554055733</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      onclick="location.href='mailto:admin@auxes.in'">
+                      <i class="bi bi-envelope-fill"></i>
+                      &nbsp;admin@auxes.in</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://wa.me/7415815467"
+                      ><i class="bi bi-whatsapp"></i> &nbsp;+91 7415815467</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -642,7 +808,7 @@
                   animation-delay: 0.8s;
                   animation-name: fadeInLeft;
                 ">
-                <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
                 <div class="f_social_icon">
                   <a href="#"><i class="bi bi-facebook"></i></a>
                   <a href="#"><i class="bi bi-twitter"></i></a>

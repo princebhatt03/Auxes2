@@ -99,14 +99,30 @@ h6 {
   border-radius: 4px;
   transition: 0.3s;
 }
+#deskHide {
+  display: none;
+}
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
+#mobHide {
+  display: none;
+}
 
 @media (max-width: 1200px) {
+  .fetimg {
+    width: 100%;
+  }
+  #resp {
+    display: flex;
+    flex-direction: column;
+  }
+  #deskHide {
+    display: block;
+  }
   .header {
     top: 0;
   }
@@ -1658,7 +1674,7 @@ section,
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials {
-  --background-color: #f4f4f4;
+  --background-color: #ffffff;
 }
 
 .testimonials .info h3 {
@@ -2869,7 +2885,7 @@ section,
 }
 .new_footer_area .footer_bottom {
   padding-top: 5px;
-  padding-bottom: 50px;
+  padding-bottom: 5px;
 }
 .footer_bottom {
   font-size: 14px;
